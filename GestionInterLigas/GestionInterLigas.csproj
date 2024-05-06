@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiService.cs" />
+    <Compile Include="components\MatchTable.cs" />
     <Compile Include="conexion.cs" />
     <Compile Include="entities\Partido.cs" />
     <Compile Include="Form1.cs">

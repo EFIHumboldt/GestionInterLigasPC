@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7A94579B-004F-4AEF-A8A2-75C11CE9B60A}|GestionInterLigas\\GestionInterLigas.csproj|e:\\users\\usuario\\desktop\\gestioninterligaspc\\gestioninterligas\\components\\matchtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A94579B-004F-4AEF-A8A2-75C11CE9B60A}|GestionInterLigas\\GestionInterLigas.csproj|solutionrelative:gestioninterligas\\components\\matchtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A94579B-004F-4AEF-A8A2-75C11CE9B60A}|GestionInterLigas\\GestionInterLigas.csproj|e:\\users\\usuario\\desktop\\gestioninterligaspc\\gestioninterligas\\query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A94579B-004F-4AEF-A8A2-75C11CE9B60A}|GestionInterLigas\\GestionInterLigas.csproj|solutionrelative:gestioninterligas\\query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A94579B-004F-4AEF-A8A2-75C11CE9B60A}|GestionInterLigas\\GestionInterLigas.csproj|E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\gestioninterligas\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{7A94579B-004F-4AEF-A8A2-75C11CE9B60A}|GestionInterLigas\\GestionInterLigas.csproj|solutionrelative:gestioninterligas\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A94579B-004F-4AEF-A8A2-75C11CE9B60A}|GestionInterLigas\\GestionInterLigas.csproj|E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\gestioninterligas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A94579B-004F-4AEF-A8A2-75C11CE9B60A}|GestionInterLigas\\GestionInterLigas.csproj|solutionrelative:gestioninterligas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A94579B-004F-4AEF-A8A2-75C11CE9B60A}|GestionInterLigas\\GestionInterLigas.csproj|e:\\users\\usuario\\desktop\\gestioninterligaspc\\gestioninterligas\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A94579B-004F-4AEF-A8A2-75C11CE9B60A}|GestionInterLigas\\GestionInterLigas.csproj|solutionrelative:gestioninterligas\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "query.cs",
+              "DocumentMoniker": "E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\GestionInterLigas\\query.cs",
+              "RelativeDocumentMoniker": "GestionInterLigas\\query.cs",
+              "ToolTip": "E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\GestionInterLigas\\query.cs",
+              "RelativeToolTip": "GestionInterLigas\\query.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAwDoAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T14:15:12.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApiService.cs",
+              "DocumentMoniker": "E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\GestionInterLigas\\ApiService.cs",
+              "RelativeDocumentMoniker": "GestionInterLigas\\ApiService.cs",
+              "ToolTip": "E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\GestionInterLigas\\ApiService.cs",
+              "RelativeToolTip": "GestionInterLigas\\ApiService.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAcwHMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T15:54:58.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MatchTable.cs",
+              "DocumentMoniker": "E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\GestionInterLigas\\components\\MatchTable.cs",
+              "RelativeDocumentMoniker": "GestionInterLigas\\components\\MatchTable.cs",
+              "ToolTip": "E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\GestionInterLigas\\components\\MatchTable.cs",
+              "RelativeToolTip": "GestionInterLigas\\components\\MatchTable.cs",
+              "ViewState": "AQIAAKEAAAAAAAAAAAAAAGsAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T14:59:47.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.config",
+              "DocumentMoniker": "E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\GestionInterLigas\\App.config",
+              "RelativeDocumentMoniker": "GestionInterLigas\\App.config",
+              "ToolTip": "E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\GestionInterLigas\\App.config",
+              "RelativeToolTip": "GestionInterLigas\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-06T01:50:06.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\GestionInterLigas\\Form1.cs",
+              "RelativeDocumentMoniker": "GestionInterLigas\\Form1.cs",
+              "ToolTip": "E:\\Users\\Usuario\\Desktop\\GestionInterLigasPC\\GestionInterLigas\\Form1.cs",
+              "RelativeToolTip": "GestionInterLigas\\Form1.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAAwGsAAAB5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-06T01:47:49.791Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
