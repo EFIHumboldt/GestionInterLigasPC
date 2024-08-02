@@ -36,7 +36,8 @@ namespace GestionInterLigas
                 "LCF MASCULINO",
                 "LCF FEMENINO",
                 "AFA FEMENINO",
-                "AFA JUVENILES"
+                "AFA JUVENILES",
+                "AFA INFANTILES"
             };
 
             comboBoxLiga.DataSource = torneos;
@@ -81,6 +82,13 @@ namespace GestionInterLigas
 
                 list.Add("INFERIORES");
             }
+            else if(comboBoxLiga.SelectedIndex == 4)
+            {
+                groupBox2.Enabled = false;
+
+                list.Add("2011-2012-2013-2014");
+          
+            }
 
             comboBoxDivision.DataSource = list;
         }
@@ -89,7 +97,7 @@ namespace GestionInterLigas
         {
             List<String> list = new List<String>();
 
-            for (int i = 1;i<16;i++) { list.Add(i.ToString()); }
+            for (int i = 1;i<40;i++) { list.Add(i.ToString()); }
             comboBoxFecha.DataSource = list;
 
         }
@@ -107,6 +115,7 @@ namespace GestionInterLigas
                 else if (comboBoxLiga.SelectedIndex == 1) { baseUrl = "https://vps-3888229-x.dattaweb.com/ligacordobesa_femenino"; }
                 else if (comboBoxLiga.SelectedIndex == 2) { baseUrl = "https://vps-3888229-x.dattaweb.com/liga_afa_femenina"; }
                 else if (comboBoxLiga.SelectedIndex == 3) { baseUrl = "https://vps-3888229-x.dattaweb.com/lpf_inferiores_a"; }
+                else if (comboBoxLiga.SelectedIndex == 4) { baseUrl = "https://vps-3888229-x.dattaweb.com/liga_afa_juveniles"; }
 
                 Dictionary<string, string> parametros = new Dictionary<string, string>
             {
@@ -143,9 +152,7 @@ namespace GestionInterLigas
             if (MessageBox.Show("¿Está seguro de realizar la actualización de los partidos?", "Actualizar partidos", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 int i = -1;
-                if (radioButton1.Checked) i = 0;
-                else if (radioButton2.Checked) i = 1;
-                else if (radioButton3.Checked) i = 2;
+            
 
                 if (!matchTable.checkDateFromTable(comboBoxLiga.SelectedIndex, comboBoxDivision.SelectedIndex, i))
                 {
@@ -155,7 +162,7 @@ namespace GestionInterLigas
 
 
                 List<Partido> matchToUpdate = matchTable.getListFromTable(comboBoxLiga.SelectedIndex, comboBoxDivision.SelectedIndex, i);
-
+                MessageBox.Show("hpña");
                 try
                 {
                     var tarea = updatePartidos(baseUrl, "pc_update_matchs.php", matchToUpdate);

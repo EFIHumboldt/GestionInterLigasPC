@@ -657,6 +657,57 @@ namespace GestionInterLigas.components
                     }
                 }  
             }
+            else if (torneo == 4)
+            {
+                for (int i = 0; i < listMatchs.Count() - 3; i += 4)
+                {
+                    Partido p1 = listMatchs[i];
+                    Partido p2 = listMatchs[i + 1];
+                    Partido p3 = listMatchs[i + 2];
+                    Partido p4 = listMatchs[i + 3];
+
+                    tabla.Rows.Add(new string[]
+                    {
+                            p1.Id.ToString(),
+                            p2.Id.ToString(),
+                            p3.Id.ToString(),
+                            p4.Id.ToString(),
+                            p1.NombreLocal.ToString(),
+                            "",
+                            p1.ResultadoLocal.ToString(),
+                            p1.Fecha.ToString(),
+                            p2.ResultadoLocal.ToString(),
+                            p2.Fecha.ToString(),
+                            p3.ResultadoLocal.ToString(),
+                            p3.Fecha.ToString(),
+                            p4.ResultadoLocal.ToString(),
+                            p4.Fecha.ToString()
+
+                    });
+
+                    tabla.Rows.Add(new string[]
+                     {
+                            p1.Id.ToString(),
+                            p2.Id.ToString(),
+                            p3.Id.ToString(),
+                            p4.Id.ToString(),
+
+                            p1.NombreVisita.ToString(),
+                            "",
+                            p1.ResultadoVisita.ToString(),
+                            p1.Hora.ToString(),
+                            p2.ResultadoVisita.ToString(),
+                            p2.Hora.ToString(),
+                            p3.ResultadoVisita.ToString(),
+                            p3.Hora.ToString(),
+                            p4.ResultadoVisita.ToString(),
+                            p4.Hora.ToString()
+
+                     });
+
+                    tabla.Rows.Add();
+                }
+            }
         }
 
         public void setRowsAndColumnsTable(int torneo, int division, int cat)
@@ -997,6 +1048,58 @@ namespace GestionInterLigas.components
                     tabla.Columns["FH3"].SortMode = DataGridViewColumnSortMode.NotSortable;
                 }
             }
+            else if (torneo == 4)
+            {
+                tabla.Columns.Add("ID1", "ID 1");
+                tabla.Columns.Add("ID2", "ID 2");
+                tabla.Columns.Add("ID3", "ID 3");
+                tabla.Columns.Add("ID4", "ID 4");
+                tabla.Columns.Add("EQUIPOS", "EQUIPOS");
+                tabla.Columns.Add("NADA", "");
+                tabla.Columns.Add("P1", "2011");
+                tabla.Columns.Add("FH1", "FECHA Y HORA");
+                tabla.Columns.Add("P2", "2012");
+                tabla.Columns.Add("FH2", "FECHA Y HORA");
+                tabla.Columns.Add("P3", "2013");
+                tabla.Columns.Add("FH3", "FECHA Y HORA");
+                tabla.Columns.Add("P4", "2014");
+                tabla.Columns.Add("FH4", "FECHA Y HORA");
+
+                tabla.Columns["ID1"].Visible = false;
+                tabla.Columns["ID2"].Visible = false;
+                tabla.Columns["ID3"].Visible = false;
+                tabla.Columns["ID4"].Visible = false;
+                tabla.Columns["EQUIPOS"].Width = 250;
+                tabla.Columns["NADA"].Width = 5;
+                tabla.Columns["P1"].Width = 30;
+                tabla.Columns["P2"].Width = 30;
+                tabla.Columns["P3"].Width = 30;
+                tabla.Columns["P4"].Width = 30;
+                tabla.Columns["FH1"].Width = 100;
+                tabla.Columns["FH2"].Width = 100;
+                tabla.Columns["FH3"].Width = 100;
+                tabla.Columns["FH4"].Width = 100;
+
+                tabla.Columns["ID1"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                tabla.Columns["ID2"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                tabla.Columns["ID3"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                tabla.Columns["ID4"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                tabla.Columns["EQUIPOS"].DefaultCellStyle.BackColor = Color.LightCyan;
+                tabla.Columns["EQUIPOS"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                tabla.Columns["P1"].DefaultCellStyle.BackColor = Color.LightCyan;
+                tabla.Columns["P1"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                tabla.Columns["P2"].DefaultCellStyle.BackColor = Color.LightCyan;
+                tabla.Columns["P2"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                tabla.Columns["P3"].DefaultCellStyle.BackColor = Color.LightCyan;
+                tabla.Columns["P3"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                tabla.Columns["P4"].DefaultCellStyle.BackColor = Color.LightCyan;
+                tabla.Columns["P4"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                tabla.Columns["FH1"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                tabla.Columns["FH2"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                tabla.Columns["FH3"].SortMode = DataGridViewColumnSortMode.NotSortable;
+                tabla.Columns["FH4"].SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
 
         }
 
@@ -1253,6 +1356,60 @@ namespace GestionInterLigas.components
                     if (!string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[10].Value)))
                     {
                         string hora = Convert.ToString(tabla.Rows[i + 1].Cells[10].Value);
+                        if (!Regex.IsMatch(hora, @"^\d{2}:\d{2}$")) v = false;
+                    }
+                }
+                return v;
+            }
+            else if (torneo == 4)
+            {
+                for (int i = 0; i < tabla.Rows.Count - 2; i += 3)
+                {
+                    if ((!string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i].Cells[6].Value)) && string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[6].Value))) ||
+                    (string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i].Cells[6].Value)) && !string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[6].Value))))
+                    {
+                        v = false;
+                    }
+
+                    if ((!string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i].Cells[8].Value)) && string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[8].Value))) ||
+                    (string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i].Cells[8].Value)) && !string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[8].Value))))
+                    {
+                        v = false;
+                    }
+
+                    if ((!string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i].Cells[10].Value)) && string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[10].Value))) ||
+                    (string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i].Cells[10].Value)) && !string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[10].Value))))
+                    {
+                        v = false;
+                    }
+
+                    if ((!string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i].Cells[12].Value)) && string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[12].Value))) ||
+                    (string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i].Cells[12].Value)) && !string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[12].Value))))
+                    {
+                        v = false;
+                    }
+
+                    if (!string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[7].Value)))
+                    {
+                        string hora = Convert.ToString(tabla.Rows[i + 1].Cells[7].Value);
+                        if (!Regex.IsMatch(hora, @"^\d{2}:\d{2}$")) v = false;
+                    }
+
+                    if (!string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[9].Value)))
+                    {
+                        string hora = Convert.ToString(tabla.Rows[i + 1].Cells[9].Value);
+                        if (!Regex.IsMatch(hora, @"^\d{2}:\d{2}$")) v = false;
+                    }
+
+                    if (!string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[11].Value)))
+                    {
+                        string hora = Convert.ToString(tabla.Rows[i + 1].Cells[11].Value);
+                        if (!Regex.IsMatch(hora, @"^\d{2}:\d{2}$")) v = false;
+                    }
+
+                    if (!string.IsNullOrEmpty(Convert.ToString(tabla.Rows[i + 1].Cells[13].Value)))
+                    {
+                        string hora = Convert.ToString(tabla.Rows[i + 1].Cells[13].Value);
                         if (!Regex.IsMatch(hora, @"^\d{2}:\d{2}$")) v = false;
                     }
                 }
